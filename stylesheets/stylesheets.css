@@ -79,25 +79,6 @@ animation:name1 8s;
   100%{opacity:1;}
 }
 
-@media screen and (max-width: 42em) {
-  .project-name {
-    font-size: 1.75rem; } }
-
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7; 
-animation:name2 8s;
-  animation-delay:2s;
-  animation-iteration-count:infinite;
-}
-@keyframes name2 {
-  0%{opacity:0;}
-  100%{opacity:1;}
-}
-
-
-
 @media screen and (min-width: 64em) {
   .main-content {
     max-width: 64rem;
