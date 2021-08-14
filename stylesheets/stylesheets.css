@@ -22,6 +22,12 @@ body{
   color: #606c71;}
     }
 
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: #159957;
+  background-image: linear-gradient(120deg, #FA8072, #155799); }
+
 a {
   color: #1e6bb8;
   text-decoration: none; }
