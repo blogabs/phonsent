@@ -46,6 +46,7 @@ animation:name1 8s;
   max-width: 100%; }
 
 .main-content h1, .main-content h2, .main-content h3 {
+  margin-left:3rem;
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: normal;
