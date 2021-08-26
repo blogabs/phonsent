@@ -168,9 +168,14 @@ const config = {
           desc:"管理多个社交媒体账号"
         },
         {
-          url:"=https://ifttt.com/",
+          url:"https://ifttt.com/",
           name:"Ifttt",
           desc:"同步发布社交媒体内容"
+        },
+        {
+          url:"https://blogger.com/",
+          name:"Blogger",
+          desc:"博客日志"
         },
         {
           url:"https://phonsent.com/",
@@ -244,8 +249,9 @@ function getFavicon(url){
  */
 
 function renderIndex(){
-  const footer = el('footer',[],el('div',['class="footer"'],'Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License')+"<br>Created in 2021.8.18 by Phonsent.com"));
-  return renderHeader() + renderMain() + footer;
+  const footer = el('footer',[],el('div',['class="footer"'],+'<br>Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License')+"<br>Created in 2021.8.18 by Phonsent.com"));
+  const share = el('footer',[],el('div',['class="footer"'],el('div',['class="sharethis-inline-share-buttons"'])));
+  return renderHeader() + renderMain() + share + footer;
 }
 
 function renderHeader(){
@@ -260,7 +266,7 @@ function renderHeader(){
       return item(link.template,link.name);
     }
   }).join(""))
-  var input = el('div',['class="ui left corner labeled right icon fluid large input"'],el('div',['class="ui left corner label"'],el('img',['id="search-fav"','class="left floated avatar ui image"','src="https://www.baidu.com/favicon.ico"'],"")) + el('input',['id="searchinput"','type="search"','placeholder="搜索你想知道的……"','autocomplete="off"'],"") + el('i',['class="inverted circular search link icon"'],""));
+  var input = el('div',['class="ui left corner labeled right icon fluid large input"'],el('div',['class="ui left corner label"'],el('img',['id="search-fav"','class="left floated avatar ui image"','src="https://cdn.jsdelivr.net/gh/blogabs/phonsent/favicon.ico"'],"")) + el('input',['id="searchinput"','type="search"','placeholder="使用Ctrl+D可收藏本站，搜索你想要的信息"','autocomplete="off"'],"") + el('i',['class="inverted circular search link icon"'],""));
   return el('header',[],el('div',['id="head"','class="ui inverted vertical masthead center aligned segment"'],(config.hitokoto ? el('div',['id="nav"','class="ui container"'],nav) : "") + el('div',['id="title"','class="ui text container"'],title + (config.search ? input + menu :""))))
 }
 
@@ -289,11 +295,21 @@ function renderHTML(index) {
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>${config.title} - ${config.subtitle}</title>
       <meta name="description" content="Phonsent品牌出海导航站，让您在出海做跨境电商时，快速触及海外客户聚集的平台，精准推广！">
-      <meta name="keywords" content="phonsent,品牌出海,跨境电商独立站推广">
+      <meta name="keywords" content="phonsent,品牌出海导航,跨境电商独立站推广">
       <link href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/gh/blogabs/phonsent/stylesheets/style.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J63RYNNXQF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J63RYNNXQF');
+</script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=6126f0e68aa229001265058d&product=inline-share-buttons' async='async'></script>
   </head>
   <body>
     ${index}
