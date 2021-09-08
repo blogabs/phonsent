@@ -1,7 +1,7 @@
 
 const config = {
-  title: "品牌出海导航",                 
-  subtitle: "跨境电商独立站推广", 
+  title: "Phonsent导航",                 
+  subtitle: "品牌出海 - 跨境电商独立站推广", 
   logo_icon: "paper plane",                                  
   search:true,                        
   search_engine:[                     
@@ -25,7 +25,7 @@ const config = {
 
   lists: [                            //Url list
     {
-      name:"翻译工具 Translate tool",
+      name:"翻译工具 Translate",
       icon:"paper plane",
       list:[
         {
@@ -78,7 +78,12 @@ const config = {
           url:"https://wordpress.com/",
           name:"Wordpress",
           desc:"支持商店插件"
-        },
+        },  
+        {
+          url:"https://shop.phonsent.com/",
+          name:"小商店导航",
+          desc:"微信小商店推广"
+        },  
       ]
     },
     {
@@ -159,8 +164,8 @@ const config = {
       ]
     },
     {
-      name:"社交工具 Social media tool",
-      icon:"users",
+      name:"社交工具 Social media",
+      icon:"linkify",
       list:[
         {
           url:"https://buffer.com/",
@@ -178,11 +183,6 @@ const config = {
           desc:"博客日志"
         },
         {
-          url:"https://phonsent.com/",
-          name:"Phonsent",
-          desc:"品牌出海导航"
-        },
-        {
           url:"https://www.google.com/gmail/",
           name:"Gmail",
           desc:"谷歌Gmail邮箱"
@@ -195,7 +195,7 @@ const config = {
       ]
     },
     {
-      name:"学习",
+      name:"学习 Learning related",
       icon:"graduation cap",
       list:[
         {
@@ -212,6 +212,16 @@ const config = {
           url:"https://cloudflare.com/",
           name:"Cloudflare",
           desc:"CDN加速"
+        },
+        {
+          url:"https://developers.cloudflare.com/workers/",
+          name:"CF workers",
+          desc:"学习文档"
+        },
+        {
+          url:"https://www.google.com/intl/en_au/search/howsearchworks/how-search-works/",
+          name:"Google search",
+          desc:"了解谷歌搜索的工作过程"
         },
       ]
     },
@@ -249,8 +259,8 @@ function getFavicon(url){
  */
 
 function renderIndex(){
-  const footer = el('footer',[],el('div',['class="footer"'],+'<br>Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License')+"<br>Created in 2021.8.18 by Phonsent.com"));
-  const share = el('footer',[],el('div',['class="footer"'],el('div',['class="sharethis-inline-share-buttons"'])));
+  const footer = el('footer',[],el('div',['class="footer"'],'Powered by' + el('a',['class="ui label"','href="https://github.com/sleepwood/cf-worker-dir"','target="_blank"'],el('i',['class="github icon"'],"") + 'Cf-Worker-Dir') + ' &copy; Base on ' + el('a',['class="ui label"'],el('i',['class="balance scale icon"'],"") + 'MIT License') +"<br>Created in 2021.8.18 by Phonsent.com"));
+  const share = el('share',[],el('div',['class="footer"'],el('div',['class="sharethis-inline-share-buttons"'])));
   return renderHeader() + renderMain() + share + footer;
 }
 
@@ -296,6 +306,7 @@ function renderHTML(index) {
       <title>${config.title} - ${config.subtitle}</title>
       <meta name="description" content="Phonsent品牌出海导航站，让您在出海做跨境电商时，快速触及海外客户聚集的平台，精准推广！">
       <meta name="keywords" content="phonsent,品牌出海导航,跨境电商独立站推广">
+      <link rel="icon" href="https://cdn.jsdelivr.net/gh/blogabs/phonsent/favicon.ico" />
       <link href="https://cdn.jsdelivr.net/npm/semantic-ui-css@2.4.1/semantic.min.css" rel="stylesheet">
       <link href="https://cdn.jsdelivr.net/gh/blogabs/phonsent/stylesheets/style.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
