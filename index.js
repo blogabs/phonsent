@@ -1,7 +1,7 @@
 
 const config = {
   title: "Phonsent导航",                 
-  subtitle: "品牌出海 - 跨境电商独立站推广", 
+  subtitle: "跨境电商独立站推广", 
   logo_icon: "paper plane",                                  
   search:true,                        
   search_engine:[                     
@@ -18,8 +18,8 @@ const config = {
       template:"https://www.bing.com/search?q=$s"
     },
     {
-      name:"搜 狗",
-      template:"https://www.sogou.com/web?query=$s"
+      name:"亚马逊",
+      template:"https://www.amazon.com/s?k=$s"
     }
   ],
 
@@ -38,11 +38,47 @@ const config = {
           name:"Google Translate",
           desc:"懂英文"
         },
+        {
+          url:"https://blog.phonsent.com/",
+          name:"Phonsent blog",
+          desc:"跨境电商独立站推广教程"
+        },
       ]
     },
     {
-      name:"跨境电商 E-commerce",
-      icon:"globe cap",
+      name:"站点工具 Website tool",
+      icon:"sitemap",
+      list:[
+        {
+          url:"https://analytics.google.com/",
+          name:"Google Analytics",
+          desc:"谷歌站点分析工具"
+        },
+        {
+          url:"https://search.google.com/search-console/",
+          name:"Google Search",
+          desc:"谷歌站点搜索词"
+        },
+        {
+          url:"https://www.wordstream.com/keywords/",
+          name:"Keyword Tool",
+          desc:"关键词搜索热度查询"
+        },
+        {
+          url:"https://www.sureoak.com/seo-tools/keyword-rank-checker/",
+          name:"Keyword Rank Checker",
+          desc:"关键词搜索排名查询"
+        },
+        {
+          url:"https://www.keyword.io/",
+          name:"Keyword research tool",
+          desc:"长尾关键词搜索查询"
+        },
+      ]
+    },
+     {
+      name:"品牌出海 Global branding",
+      icon:"paper plane",
       list:[
         {
           url:"https://trends.google.com/trends/",
@@ -79,42 +115,6 @@ const config = {
           name:"Wordpress",
           desc:"支持商店插件"
         },  
-        {
-          url:"https://shop.phonsent.com/",
-          name:"小商店导航",
-          desc:"微信小商店推广"
-        },  
-      ]
-    },
-    {
-      name:"站点工具 Website tool",
-      icon:"sitemap",
-      list:[
-        {
-          url:"https://analytics.google.com/",
-          name:"Google Analytics",
-          desc:"谷歌站点分析工具"
-        },
-        {
-          url:"https://search.google.com/search-console/",
-          name:"Google Search",
-          desc:"谷歌站点搜索词"
-        },
-        {
-          url:"https://www.wordstream.com/keywords/",
-          name:"Keyword Tool",
-          desc:"关键词搜索热度查询"
-        },
-        {
-          url:"https://www.sureoak.com/seo-tools/keyword-rank-checker/",
-          name:"Keyword Rank Checker",
-          desc:"关键词搜索排名查询"
-        },
-        {
-          url:"https://www.keyword.io/",
-          name:"Keyword research tool",
-          desc:"长尾关键词搜索查询"
-        },
       ]
     },
     {
@@ -214,11 +214,6 @@ const config = {
           desc:"CDN加速"
         },
         {
-          url:"https://developers.cloudflare.com/workers/",
-          name:"CF workers",
-          desc:"学习文档"
-        },
-        {
           url:"https://www.google.com/intl/en_au/search/howsearchworks/how-search-works/",
           name:"Google search",
           desc:"了解谷歌搜索的工作过程"
@@ -303,7 +298,7 @@ function renderHTML(index) {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>${config.title} - ${config.subtitle}</title>
+      <title>Phonsent_品牌出海导航 - ${config.subtitle}</title>
       <meta name="description" content="Phonsent品牌出海导航站，让您在出海做跨境电商时，快速触及海外客户聚集的平台，精准推广！">
       <meta name="keywords" content="phonsent,品牌出海导航,跨境电商独立站推广">
       <link rel="icon" href="https://cdn.jsdelivr.net/gh/blogabs/phonsent/favicon.ico" />
