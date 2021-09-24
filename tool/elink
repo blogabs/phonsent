@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="" />
+<meta name="Description" content="" />
+<title>SEO外链工具</title>
+<link href="https://tool.lusongsong.com/seo/images/style.css" rel="stylesheet" type="text/css" />
+<script src="https://tool.lusongsong.com/seo/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+function cgurl(obj,url){
+	obj.href=url;
+}
+
+function ck_dn(str)
+{
+        if(!/^([\w-]+\.)+((com)|(cn)|(hk)|(net)|(org)|(xyz)|(win)|(so)|(top)|(fun)|(site)|(wang)|(club)|(red)|(hn)|(ren)|(online)|(xyz)|(kim)|(news)|(tech)|(bid)|(cf)|(biz)|(vip)|(fm)|(wiki)|(xin)|(name)|(gov\.cn)|(info)|(cc)|(co)|(me)|(asia)|(com\.cn)|(net\.cn)|(org\.cn)|(name)|(ink)|(pub)|(biz)|(tv)|(la))$/.test(str)){
+            return false;
+        }else{
+		    return true;	
+		}
+
+}
+</script>
+</head>
+
+<body>
+<div id="main">
+<div class="cbox">
+     <div class="head">
+       <h2>网站自动化外链建设</h2></div>
+     <div class="con"> 
+	 <div class="domain">
+		 <h1 class="ulltext">SEO超级外链工具</h1>
+         提示：网址不要加https://，域名后面不加/
+         <br />
+<span class="ulltext">
+http://
+</span>
+<input type="text" ID="dn" value="" class="input" name="dn" style="width:450px;line-height: 24px; font-size:24px; font-weight:bold; color:#4F90D2;" /> 
+<input name="" class="btn" id="linkbtn" type="submit" value="开始增加外链"  /> 
+ </div>
+<div style="clear:both"></div>
+
+  </div><!--cbox-->
+  
+  <div class="cbox" id="linkshow" style=" display:none">
+     <div class="head"><h2>正在访问的链接</h2></div>
+     <div class="con" id="linklist">
+                </div><!--con-->
+     <div style="clear:both"></div>
+  </div>
+  
+  <!--cbox-->
+<script type="text/javascript">
+
+$("#linkbtn").click(function(){
+		$domain = $("#dn").val();
+		if($domain==""){
+		   alert("请输入域名");	
+		}else if(ck_dn($domain)){
+			$("#linkshow").show();
+			$("#linklist").html("<iframe src='https://tool.lusongsong.com/seo/datanew.php?p=1&dn="+$domain+"' height='270' width='900' marginwidth='0' marginheight='0' hspace='0' vspace='0' frameborder='0' scrolling='no'></iframe>");
+
+		}else{
+			alert("请输入正确的域名");
+		}
+							 
+});
+
+</script>
+
+<div id="footer">
+Copyright © 2009-2021 <a href="https://tool.lusongsong.com/" target="_blank">卢松松站长工具大全</a></div>
+<!--footer-->
+
+</body>
+</html>
